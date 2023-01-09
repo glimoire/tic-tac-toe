@@ -1,7 +1,7 @@
 const X_CLASS = 'x'
 const O_CLASS = 'o'
 const WINNING_COMBOS = [
-    [0, 1 , 2]
+    [0, 1, 2]
     [3, 4, 5]
     [6, 7, 8]
     [0, 3, 6]
@@ -56,7 +56,7 @@ function setBoardHoverClass () {
 }
 
 function checkWin(currentClass) {
-    WINNING_COMBOS.some(combination => {
+    return WINNING_COMBOS.some(combination => {
         return combination.every(index => {
             return cellElements[index].classList.contains(currentClass)
         })
