@@ -13,7 +13,7 @@ const WINNING_COMBOS = [
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 const victoryMessageElement = document.getElementById ('victoryMessage')
-const victoryMessageTextElement = document.querySelector('[data-victory-text]')
+const victoryMessageTextElement = document.querySelector('[data-victory-message-text]')
 let oTurn
 
 startGame()
