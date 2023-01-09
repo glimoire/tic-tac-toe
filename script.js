@@ -31,9 +31,8 @@ function handleClick(e) {
     const currentClass = oTurn ? O_CLASS : X_CLASS
     placeMark(cell, currentClass)
     if (checkWin(currentClass)) {
-        console.log('winner')
+        endGame(false)
     }
-    endGame(false)
     //
     swapTurns()
     setBoardHoverClass()
