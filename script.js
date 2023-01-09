@@ -12,6 +12,8 @@ const WINNING_COMBOS = [
 ]
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
+const winningMessageElement = document.getElementById ('winningMessage')
+const winningMessageTextElement = document.querySelector('[data-victory-text]')
 let oTurn
 
 startGame()
@@ -31,10 +33,19 @@ function handleClick(e) {
     if (checkWin(currentClass)) {
         console.log('winner')
     }
-    //
+    endGame(false)
     //
     swapTurns()
     setBoardHoverClass()
+}
+
+function endGame(draw) {
+    if (draw) {
+
+    } else {
+        winningMessageTextElement.innerText = '${circleTurn ? "The Noughts" : "The Crosses"} Claim Victory!'
+        winningMessageElement.classList.add('show')
+    }
 }
 
 function placeMark(cell, currentClass) {
