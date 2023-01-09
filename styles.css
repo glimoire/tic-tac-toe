@@ -130,12 +130,12 @@ body {
     font-size: 5rem;
 }
 
-.victory-screen {
+.victory-screen button {
     font-size: 3em;
     background-color: white;
     border: 1px solid black;
     padding: .25em .5em;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .victory-screen button:hover {
