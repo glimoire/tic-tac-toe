@@ -12,7 +12,7 @@ const WINNING_COMBOS = [
 ]
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
-const victoryMessageElement = document.getElementById ('victoryMessage')
+const victoryMessageElement = document.getElementById('victoryMessage')
 const victoryMessageTextElement = document.querySelector('[data-victory-message-text]')
 let oTurn
 
@@ -42,7 +42,7 @@ function endGame(draw) {
     if (draw) {
 
     } else {
-        victoryMessageTextElement.innerText = '${oTurn ? "The Noughts" : "The Crosses"} Win!'
+        victoryMessageTextElement.innerText = '${oTurn ? "The Noughts":"The Crosses"} Win!'
         victoryMessageElement.classList.add('show')
     }
 }
