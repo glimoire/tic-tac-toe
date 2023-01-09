@@ -106,7 +106,6 @@ body {
 .board.o .cell:not(.x):not(.o):hover::before {
     width: var(--mark-size);
     height: var(--mark-size);
-    background-color: black;
 }
 
 .cell.o::after,
