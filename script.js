@@ -4,7 +4,7 @@ const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 let oTurn
 
-StartGame()
+startGame()
 
 function startGame() {
     oTurn = false
