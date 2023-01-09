@@ -54,7 +54,7 @@ body {
 
 .cell.x::before,
 .cell.x::after {
-    content: 'l';
+    content: '';
     position:absolute;
     width: calc(var(--mark-size) * .15);
     height: var(--mark-size);
