@@ -63,8 +63,7 @@ body {
     background-color: black;
 }
 
-.cell.o::before,
-.cell.o::after {
+.cell.o::before {
     background-color: black;
 }
 .board.x .cell:not(.x):not(.o):hover::before,
