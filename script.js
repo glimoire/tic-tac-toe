@@ -42,7 +42,7 @@ function endGame(draw) {
     if (draw) {
 
     } else {
-        victoryMessageTextElement.innerText = '${circleTurn ? "The Noughts" : "The Crosses"} Claim Victory!'
+        victoryMessageTextElement.innerText = '${oTurn ? "The Noughts" : "The Crosses"} Claim Victory!'
         victoryMessageElement.classList.add('show')
     }
 }
