@@ -4,9 +4,15 @@ const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 let oTurn
 
-cellElements.forEach(cell => {
-    cell.addEventListener('click', handleClick, {once: true})
-})
+StartGame()
+
+function startGame() {
+    oTurn = false
+    cellElements.forEach(cell => {
+        cell.addEventListener('click', handleClick, {once: true})
+    })
+    setBoardHoverClass()
+}
 
 function handleClick(e) {
     const cell = e.target
@@ -30,7 +36,7 @@ function swapTurns() {
 function setBoardHoverClass () {
     board.classList.remove(X_CLASS)
     board.classList.remove(O_CLASS)
-    if (circleTurn) {
+    if (oTurn) {
         board.classList.add(O_CLASS)
     } else {
         board.classList.add(X_CLASS)
