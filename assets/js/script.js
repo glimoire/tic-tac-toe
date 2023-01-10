@@ -1,5 +1,6 @@
 const X_CLASS = 'x';
 const O_CLASS = 'o';
+//winning combinations
 const WINNING_COMBOS = [
     [0, 1, 2],
     [3, 4, 5],
@@ -33,6 +34,7 @@ function startGame() {
     victoryMessageElement.classList.remove('show');
 }
 
+//checks for legal moves and switches player turns if one is performed
 function handleClick(e) {
     const cell = e.target;
     const currentClass = oTurn ? O_CLASS : X_CLASS;
@@ -47,6 +49,7 @@ function handleClick(e) {
     }
 }
 
+//Code for the victory screen checks for Draws or Wins and chooses text accordingly
 function endGame(draw) {
     if (draw) {
 victoryMessageTextElement.innerText = "It's a Draw!";
@@ -80,6 +83,7 @@ function setBoardHoverClass () {
     }
 }
 
+//Function checks if any winning combinations are completed
 function checkWin(currentClass) {
     return WINNING_COMBOS.some(combination => {
         return combination.every(index => {

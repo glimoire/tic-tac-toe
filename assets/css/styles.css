@@ -12,6 +12,7 @@ body {
     background-color: wheat;
 }
 
+/* Game board styling */
 .board {
     width: 100vw;
     display: grid;
@@ -22,6 +23,7 @@ body {
     grid-template-columns: repeat(3, auto);
 }
 
+/* Header image styling */
 #sign-div {
     align-content: center;
     display: flex;
@@ -33,6 +35,7 @@ body {
     align-content: center; 
 }
 
+/* Cell styling */
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);;
@@ -44,6 +47,7 @@ body {
     cursor: pointer;
 }
 
+/* Cell's outer borders are removed */
 .cell:first-child,
 .cell:nth-child(2),
 .cell:nth-child(3) {
@@ -64,11 +68,13 @@ body {
     border-bottom: none;
 }
 
+/* Stops players changing an occupied cell */
 .cell.x,
 .cell.o {
     cursor: not-allowed;
 }
 
+/* noughts and crosses styling */
 .cell.x::before,
 .cell.x::after {
     background-color: darkblue;
@@ -77,6 +83,8 @@ body {
 .cell.o::before {
     background-color: firebrick;
 }
+
+/* Hover preview styling */
 .board.x .cell:not(.x):not(.o):hover::before,
 .board.x .cell:not(.x):not(.o):hover::after,
 .board.o .cell:not(.x):not(.o):hover::before,
@@ -94,6 +102,7 @@ body {
     height: var(--mark-size);
 }
 
+/* Crosses are not one symbol, but two "L"s arranged to look like an X */
 .cell.x::before,
 .board.x .cell:not(.x):not(.o):hover::before {
     transform: rotate(45deg);
@@ -104,6 +113,7 @@ body {
     transform: rotate(-45deg);
 }
 
+/* Naughts are two circles of different colours inside one another */
 .cell.o::before,
 .cell.o::after,
 .board.o .cell:not(.x):not(.o):hover::before,
@@ -126,6 +136,7 @@ body {
     background-color: wheat;
 }
 
+/* Victory screen styling */
 .victory-screen {
     display: none;
     position: fixed;
