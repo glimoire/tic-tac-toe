@@ -125,14 +125,14 @@ body {
     background-color: rgba(0, 0, 0, .9);
     justify-content: center;
     align-items: center;
-    color: white;
+    color: wheat;
     font-size: 5rem;
     flex-direction: column;
 }
 
 .victory-screen button {
     font-size: 3rem;
-    background-color: white;
+    background-color: wheat;
     border: 1px solid black;
     padding: .25em .5em;
     cursor: pointer;
@@ -140,8 +140,8 @@ body {
 
 .victory-screen button:hover {
 background-color: black;
-color: white;
-border-color: white;
+color: wheat;
+border-color: wheat;
 }
 
 .victory-screen.show {
