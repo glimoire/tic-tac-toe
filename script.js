@@ -13,17 +13,24 @@ const WINNING_COMBOS = [
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 const victoryMessageElement = document.getElementById('victoryMessage')
+const resetButton = document.getElementById(resetButton)
 const victoryMessageTextElement = document.querySelector('[data-victory-message-text]')
 let oTurn
 
 startGame()
 
+resetButton.addEventListener('click', startGame)
+
 function startGame() {
     oTurn = false
     cellElements.forEach(cell => {
+        cell.classList.remove(X_CLASS)
+        cell.classList.remove(O_CLASS)
+        cell.removeEventListener('click', handleClick)
         cell.addEventListener('click', handleClick, {once: true})
     })
     setBoardHoverClass()
+    winningMessageElement.classList.remove('show')
 }
 
 function handleClick(e) {
@@ -45,16 +52,16 @@ function handleClick(e) {
 
 function endGame(draw) {
     if (draw) {
-victoryMessageElement.innerText = "It's a Draw!"
+victoryMessageTextElement.innerText = "It's a Draw!"
     } else {
-        victoryMessageTextElement.innerText = '${oTurn ? "The Noughts":"The Crosses"} Win!'   
+        victoryMessageTextElement.innerText = '${oTurn ? "The Noughts" : "The Crosses"} Win!'   
     }
     victoryMessageElement.classList.add('show')
 }
 
 function isDraw() {
     return [...cellElements].every(cell => {
-        return cell.classList.contains(X_CLASS) ||
+        return cell.classList.contains(X_CLASS) || 
         cell.classList.contains(O_CLASS)
     })
 }
