@@ -25,7 +25,7 @@ body {
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);;
-    border: 1px solid black;
+    border: 2px solid sienna;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,17 +60,17 @@ body {
 
 .cell.x::before,
 .cell.x::after {
-    background-color: black;
+    background-color: darkblue;
 }
 
 .cell.o::before {
-    background-color: black;
+    background-color: firebrick;
 }
 .board.x .cell:not(.x):not(.o):hover::before,
 .board.x .cell:not(.x):not(.o):hover::after,
 .board.o .cell:not(.x):not(.o):hover::before,
 .board.o .cell:not(.x):not(.o):hover::after {
-    background-color: lightgray;
+    background-color: sienna;
 }
 
 .cell.x::before,
@@ -112,7 +112,7 @@ body {
 .board.o .cell:not(.x):not(.o):hover::after{
     width: calc(var(--mark-size) * .7);
     height: calc(var(--mark-size) * .7);
-    background-color: white;
+    background-color: wheat;
 }
 
 .victory-screen {
