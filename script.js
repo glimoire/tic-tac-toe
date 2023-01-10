@@ -27,7 +27,7 @@ function startGame() {
         cell.classList.remove(X_CLASS)
         cell.classList.remove(O_CLASS)
         cell.removeEventListener('click', handleClick)
-        cell.addEventListener('click', handleClick, {once: true})
+        cell.addEventListener('click', handleClick, { once: true })
     })
     setBoardHoverClass()
     victoryMessageElement.classList.remove('show')
@@ -45,21 +45,22 @@ function handleClick(e) {
         swapTurns()
         setBoardHoverClass()
     }
-    //
-    swapTurns()
-    setBoardHoverClass()
 }
 
 function endGame(draw) {
     if (draw) {
 victoryMessageTextElement.innerText = "It's a Draw!"
     } else {
-        victoryMessageTextElement.innerText = '${oTurn ? "The Noughts" : "The Crosses"} Win!'   
+        victoryMessageTextElement.innerText = `${oTurn ? "The Noughts" : "The Crosses"} Win!`   
     }
     victoryMessageElement.classList.add('show')
 }
 
-
+function isDraw() {
+    return [...cellElements].every(cell => {
+        return cell.classList.contains(X_CLASS) || cell.classList.contains(O_CLASS)
+    })
+}
 
 function placeMark(cell, currentClass) {
     cell.classList.add(currentClass)
