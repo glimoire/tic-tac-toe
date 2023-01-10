@@ -23,6 +23,13 @@ body {
     grid-template-columns: repeat(3, auto);
 }
 
+#old-sign {
+    height: 600px;
+    width: 90%;
+    align-content: center;
+    background: url('../tic-tac-toe/images/ye\ olde\ tic\ tac\ toe.png') no repeat center center; 
+}
+
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);;
