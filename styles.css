@@ -14,7 +14,6 @@ body {
 
 .board {
     width: 100vw;
-    height: 100vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -23,11 +22,15 @@ body {
     grid-template-columns: repeat(3, auto);
 }
 
-#old-sign {
-    height: 30%;
-    width: 90%;
+#sign-div {
     align-content: center;
-    background: url('../tic-tac-toe/images/ye\ olde\ tic\ tac\ toe.png') no repeat center center; 
+    display: flex;
+    justify-content: center;
+}
+
+#old-sign {
+    height: 37vh;
+    align-content: center; 
 }
 
 .cell {
