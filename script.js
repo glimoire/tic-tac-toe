@@ -59,12 +59,7 @@ victoryMessageTextElement.innerText = "It's a Draw!"
     victoryMessageElement.classList.add('show')
 }
 
-function isDraw() {
-    return [...cellElements].every(cell => {
-        return cell.classList.contains(X_CLASS) || 
-        cell.classList.contains(O_CLASS)
-    })
-}
+
 
 function placeMark(cell, currentClass) {
     cell.classList.add(currentClass)
