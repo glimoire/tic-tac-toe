@@ -13,7 +13,7 @@ const WINNING_COMBOS = [
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 const victoryMessageElement = document.getElementById('victoryMessage')
-const resetButton = document.getElementById(resetButton)
+const resetButton = document.getElementById('resetButton')
 const victoryMessageTextElement = document.querySelector('[data-victory-message-text]')
 let oTurn
 
@@ -30,7 +30,7 @@ function startGame() {
         cell.addEventListener('click', handleClick, {once: true})
     })
     setBoardHoverClass()
-    winningMessageElement.classList.remove('show')
+    victoryMessageElement.classList.remove('show')
 }
 
 function handleClick(e) {
