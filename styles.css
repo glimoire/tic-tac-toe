@@ -27,7 +27,7 @@ body {
     height: 60px;
     width: 90%;
     align-content: center;
-    background: url('../tic-tac-toe/images/ye\ olde\ tic\ tac\ toe.png') no repeat center center; 
+    background: url('../tic-tac-toe/images/ye\ olde\ tic\ tac\ toe.png') no repeat; 
 }
 
 .cell {
